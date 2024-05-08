@@ -1,7 +1,7 @@
 import { Input } from "@/components/ui/input";
 import React from "react";
-import ProductCard from "../components/ProductCard";
-import FilterDrawer from "../components/FilterDrawer";
+import ProductCard from "@/app/admin/dashboard/components/components-page/ProductCard";
+import FilterDrawer from "@/app/admin/dashboard/components/components-page/FilterDrawer";
 import { Card } from "@/components/ui/card";
 import { Slider } from "@/components/ui/slider";
 import { Label } from "@/components/ui/label";
