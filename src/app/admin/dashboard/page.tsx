@@ -110,8 +110,15 @@ const data = [
     amt: 100,
   },
 ];
+
 function page() {
-  const theame = localStorage.getItem("theme");
+  let theame;
+  if (typeof window !== "undefined" && typeof localStorage !== "undefined") {
+    theame = localStorage.getItem("theme");
+    // Use the data
+  } else {
+    // Handle the case where localStorage is not available (e.g., initial render)
+  }
 
   return (
     <div className="w-full h-full flex flex-col gap-4 ">
