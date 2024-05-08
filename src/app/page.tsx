@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React from "react";
-import Home from "./pages/Home";
+import Home from "./admin/dashboard/components/components-page/Home";
 import Navbar from "@/components/Navbar";
 
 type Props = {};
