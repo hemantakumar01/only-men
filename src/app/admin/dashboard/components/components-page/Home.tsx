@@ -2,12 +2,11 @@
 import React from "react";
 import HeroSection from "./HeroSection";
 import { Clock2, Package, PackageCheck, WalletMinimal } from "lucide-react";
-import IconContent from "./components/IconContent";
+import IconContent from "./IconContent";
 import { Button } from "@/components/ui/button";
-import ProductCard from "./components/ProductCard";
-import { CarouselDemo } from "./components/Carosal";
-import Newsletter from "./components/Newsletter";
-import Footer from "./components/Footer";
+import Newsletter from "./Newsletter";
+import Footer from "./Footer";
+import { CarouselDemo } from "./Carosal";
 
 type Props = {};
 
