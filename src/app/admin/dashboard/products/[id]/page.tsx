@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 // import { Shadan } from "@shadan/shadan"; Shadan image upload component
 import { Input } from "@/components/ui/input";
@@ -5,18 +6,18 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import NewModle from "../../components/NewModle";
-// import { useForm } from "react-hook-form"; // Form validation library (consider using)
+import { useForm } from "react-hook-form"; // Form validation library (consider using)
 
 type Props = {};
 
-function page(props: Props) {
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors },
-  // } = useForm(); // For validation (optional)
-  // const [images, setImages] = React.useState([]); // State to store uploaded images
-  // const [file, setFile] = React.useState<Object[]>([]);
+function Page(props: Props) {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm(); // For validation (optional)
+  const [images, setImages] = React.useState([]); // State to store uploaded images
+  const [file, setFile] = React.useState<Object[]>([]);
   const progress = 0;
   const onSubmit = async (data: any) => {
     // Handle form submission logic here
@@ -33,7 +34,7 @@ function page(props: Props) {
         <NewModle open={<Button>Update</Button>} />
       </div>
       <form
-        // onSubmit={handleSubmit(onSubmit)}
+        onSubmit={handleSubmit(onSubmit)}
         className=" flex-col md:flex-row flex gap-5 items-start"
       >
         <div className="flex-1 p-3 flex flex-col gap-4 w-full">
@@ -42,12 +43,12 @@ function page(props: Props) {
             <Input
               type="text"
               id="name"
-              // {...register("name", { required: true })}
+              {...register("name", { required: true })}
             />
-            {/* Add error message if validation fails (optional) */}
-            {/* {errors.name && (
+            Add error message if validation fails (optional)
+            {errors.name && (
               <span className="error">Product name is required</span>
-            )} */}
+            )}
           </div>
 
           <div>
@@ -55,13 +56,13 @@ function page(props: Props) {
             <Input
               type="text"
               id="category"
-              // {...register("category", { required: true })}
+              {...register("category", { required: true })}
             />
           </div>
           <div>
             <Label htmlFor="description">Description:</Label>
             <Textarea
-              // {...register("description", { required: true })}
+              {...register("description", { required: true })}
               placeholder="Enter Description of"
             />
           </div>
@@ -73,42 +74,40 @@ function page(props: Props) {
               type="number"
               id="price"
               step="0.01"
-              // {...register("price", { required: true })}
+              {...register("price", { required: true })}
             />
-            {/* Add error message if validation fails (optional) */}
-            {/* {errors.price && <span className="error">Price is required</span>} */}
+            Add error message if validation fails (optional)
+            {errors.price && <span className="error">Price is required</span>}
           </div>
           <div>
             <Label htmlFor="quantity">Quantity:</Label>
             <Input
               type="number"
               id="quantity"
-              // {...register("quantity", { required: true })}
+              {...register("quantity", { required: true })}
             />
-            {/* Add error message if validation fails (optional) */}
-            {/* {errors.quantity && <span className="error">File is required</span>} */}
+            Add error message if validation fails (optional)
+            {errors.quantity && <span className="error">File is required</span>}
           </div>
           <div className="flex flex-col gap-3">
             <Input
               type="file"
               id="file"
               multiple
-              // {...register("file", { required: true })}
+              {...register("file", { required: true })}
               onChange={(e: any) => {
-                // console.log(e?.target?.files[0]!);
-                // console.log(e?.target?.files.length);
                 const myFile = [];
                 for (let i = 0; i < e?.target?.files.length; i++) {
                   let data = e?.target?.files[i];
                   myFile.push(data);
                 }
 
-                // setFile(myFile);
+                setFile(myFile);
               }}
             />
-            {/* Add error message if validation fails (optional) */}
-            {/* {errors.file && <span className="error">Quantity is required</span>} */}
-            {/* <div className="flex flex-col gap-4">
+            Add error message if validation fails (optional)
+            {errors.file && <span className="error">Quantity is required</span>}
+            <div className="flex flex-col gap-4">
               {file.length > 0 &&
                 file.map((e: any, index) => {
                   return (
@@ -128,7 +127,7 @@ function page(props: Props) {
                     </div>
                   );
                 })}
-            </div> */}
+            </div>
           </div>
 
           <Button type="submit">Create Product</Button>
@@ -138,4 +137,4 @@ function page(props: Props) {
   );
 }
 
-export default page;
+export default Page;

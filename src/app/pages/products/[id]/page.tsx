@@ -3,11 +3,11 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { PackageCheck, ShoppingBag } from "lucide-react";
 import ImageGallery from "react-image-gallery";
-import ReactStars from "react-stars";
+import Rating from "@/app/admin/dashboard/components/components-page/Rating";
 
 type Props = {};
 
-function page(props: Props) {
+function Page(props: Props) {
   const images = [
     {
       original:
@@ -84,8 +84,8 @@ function page(props: Props) {
       height: 10,
     },
   };
-  // const [color, setColor] = React.useState<string>(productDetail.colors[0].hex);
-  // const [size, setSize] = React.useState<string>(productDetail.sizes[0]);
+  const [color, setColor] = React.useState<string>(productDetail.colors[0].hex);
+  const [size, setSize] = React.useState<string>(productDetail.sizes[0]);
 
   return (
     <div className="flex p-2 flex-col md:flex-row ">
@@ -101,12 +101,12 @@ function page(props: Props) {
             {productDetail.colors.map((e, index) => (
               <button
                 className="w-7 h-7 rounded-full shadow-md transition-all ease-in duration-75"
-                // style={{
-                //   backgroundColor: e.hex,
-                //   scale: color === e.hex ? `1.1 ` : "none",
-                // }}
+                style={{
+                  backgroundColor: e.hex,
+                  scale: color === e.hex ? `1.1 ` : "none",
+                }}
                 key={index}
-                // onClick={() => setColor(e.hex)}
+                onClick={() => setColor(e.hex)}
               />
             ))}
           </div>
@@ -119,14 +119,12 @@ function page(props: Props) {
               {productDetail.sizes.map((e, index) => (
                 <label
                   key={index}
-                  style={
-                    {
-                      // backgroundColor: e === size ? "#E0E0E0" : "inherit",
-                    }
-                  }
+                  style={{
+                    backgroundColor: e === size ? "#E0E0E0" : "inherit",
+                  }}
                   htmlFor="s"
                   className="s"
-                  // onClick={() => setSize(e)}
+                  onClick={() => setSize(e)}
                 >
                   {e}
                 </label>
@@ -137,7 +135,7 @@ function page(props: Props) {
         <div className="rating ">
           <strong>Rating:</strong>
           <div className="flex items-center gap-2">
-            <ReactStars value={productDetail.rating} size={20} />
+            <Rating value={productDetail.rating} size={20} />
             <span>({productDetail.reviews.length})</span>
           </div>
         </div>
@@ -156,5 +154,5 @@ function page(props: Props) {
   );
 }
 
-export default page;
+export default Page;
 //

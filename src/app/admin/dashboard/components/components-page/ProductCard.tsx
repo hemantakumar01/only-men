@@ -9,11 +9,9 @@ type Props = {};
 
 const ProductCard = (props: Props) => {
   const route = useRouter();
-  const ratingChanged = (newRating: any) => {
-    console.log(newRating);
-  };
+
   return (
-    <Card className="w-[175px] md:w-[200px]  px-3 p-4 flex flex-col gap-2 ">
+    <Card className="w-[175px] md:w-[200px]  px-3 p-4 flex flex-col gap-2 cursor-pointer">
       <img
         src="https://rukminim2.flixcart.com/image/832/832/jvtujrk0/t-shirt/n/q/u/xl-2303701-roadster-original-imafgmvkhx3tagrc.jpeg?q=70&crop=false"
         alt=""

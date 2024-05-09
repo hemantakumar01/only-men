@@ -13,6 +13,7 @@ import {
   User2Icon,
 } from "lucide-react";
 import Menu from "./Menu";
+import { DrawerDemo } from "./Navbar/MenuDrawer";
 
 type Props = {};
 
@@ -40,7 +41,7 @@ const Navbar = (props: Props) => {
       </div>
       <div className="  flex  justify-between  mx-auto w-full  max-w-screen-xl  py-2  px-2 xl:px-0  ">
         <Link href={"/"} className="cursor-pointer ">
-          <h2 className="text-2xl pl-2 dark:bg-white flex items-center font-bold italic bg-black  text-secondary  tracking-[3px] rounded cursor-pointer">
+          <h2 className="text-lg sm:text-2xl pl-2 dark:bg-white flex items-center font-bold italic bg-black  text-secondary  tracking-[3px] rounded cursor-pointer">
             Only{" "}
             <span className="bg-blue-400 py-1 rounded-l-[10px] pr-2">Men</span>
           </h2>
@@ -69,7 +70,7 @@ const Navbar = (props: Props) => {
               className="text-blue-400 font-bold"
               fontWeight={700}
             />
-            <Link href={"/cart"}>Cart</Link>
+            <span>Cart</span>
             <span className="w-4 h-4 rounded-[50%] bg-red-500 text-secondary flex items-center justify-center text-[9px] font-bold absolute top-[-10px] left-[-3px]">
               1
             </span>
@@ -83,17 +84,21 @@ const Navbar = (props: Props) => {
             <span className="w-4 h-4 rounded-[50%] bg-red-500 text-secondary flex items-center justify-center text-[9px] font-bold absolute top-[-10px] left-[-3px]">
               1
             </span>
-            <Link href={"/cart"}>Wishlist</Link>
+            <span>Wishlist</span>
           </div>
         </div>
-        <div className="mobileMenu flex items-center gap-2 sm:hidden">
-          <img
-            className="w-9 h-9 rounded-full"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpVR1d0_9PINxXz8d17JphZo3fSmegrgaeZQ&s"
-            alt=""
-          />
-          <MenuIcon />
-        </div>
+        <DrawerDemo
+          content={
+            <div className="mobileMenu flex items-center gap-2 sm:hidden">
+              <img
+                className="w-9 h-9 rounded-full"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpVR1d0_9PINxXz8d17JphZo3fSmegrgaeZQ&s"
+                alt=""
+              />
+              <MenuIcon />
+            </div>
+          }
+        />
       </div>
       <div className="dropdowns  py-2 border-y hidden lg:block">
         <Menu />
