@@ -9,7 +9,7 @@ type Props = {};
 
 const Newsletter = (props: Props) => {
   return (
-    <div className="flex flex-col gap-3 xs:gap-5 justify-center p-4 xs:p-14">
+    <div className="flex bg-blue-300 sm:bg-inherit flex-col gap-3 xs:gap-5 justify-center p-4 xs:p-14">
       <h1 className="text-center text-3xl xs:text-5xl font-semibold text-gray-700 dark:text-primary">
         Newsletter
       </h1>
@@ -18,7 +18,7 @@ const Newsletter = (props: Props) => {
       </span>
       <div className=" flex items-center justify-center">
         {/* <Input className="w-[600px]" /> */}
-        <Card className="flex items-center justify-center p-4 xs:px-6 border-2 w-full max-w-[500px]">
+        <Card className="flex items-center justify-center p-2 sm:p-4  border-2 w-full max-w-[500px]">
           <Mails className="" />
           <Input
             className=" flex-1 text-lg font-semibold text-gray-800 dark:text-primary border-none"

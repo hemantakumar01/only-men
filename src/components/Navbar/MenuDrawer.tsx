@@ -70,7 +70,7 @@ const navItems = [
       },
       {
         title: "Register",
-        link: "/register",
+        link: "/signup",
         icon: <User size={size} />,
       },
       {

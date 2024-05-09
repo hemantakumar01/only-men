@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import Newsletter from "./Newsletter";
 import Footer from "./Footer";
 import { CarouselDemo } from "./Carosal";
+import ProductCard from "./ProductCard";
 
 type Props = {};
 
@@ -58,9 +59,9 @@ const Home = (props: Props) => {
               Polo T-shits
             </h1>
             <div className=" flex items-center justify-center gap-1">
-              <span className="w-3 h-3 bg-[#212122] rounded-full "></span>
-              <span className="w-3 h-3 bg-[#e25951] rounded-full "></span>
-              <span className="w-3 h-3 bg-[#dcdddc] rounded-full "></span>
+              <span className="w-2 h-2 bg-[#212122] rounded-full "></span>
+              <span className="w-2 h-2 bg-[#e25951] rounded-full "></span>
+              <span className="w-2 h-2 bg-[#dcdddc] rounded-full "></span>
             </div>
           </div>
 
@@ -75,9 +76,9 @@ const Home = (props: Props) => {
               Cotton T-shits
             </h1>
             <div className=" flex items-center justify-center gap-1">
-              <span className="w-3 h-3 bg-[#212122] rounded-full "></span>
-              <span className="w-3 h-3 bg-[#e25951] rounded-full "></span>
-              <span className="w-3 h-3 bg-[#dcdddc] rounded-full "></span>
+              <span className="w-2 h-2 bg-[#212122] rounded-full "></span>
+              <span className="w-2 h-2 bg-[#e25951] rounded-full "></span>
+              <span className="w-2 h-2 bg-[#dcdddc] rounded-full "></span>
             </div>
           </div>
           <div className="div3 cursor-pointer  hover:opacity-[0.6] relative">
@@ -95,9 +96,9 @@ const Home = (props: Props) => {
               Mens Sorts
             </h1>
             <div className=" flex items-center justify-center gap-1">
-              <span className="w-3 h-3 bg-[#212122] rounded-full "></span>
-              <span className="w-3 h-3 bg-[#e25951] rounded-full "></span>
-              <span className="w-3 h-3 bg-[#dcdddc] rounded-full "></span>
+              <span className="w-2 h-2 bg-[#212122] rounded-full "></span>
+              <span className="w-2 h-2 bg-[#e25951] rounded-full "></span>
+              <span className="w-2 h-2 bg-[#dcdddc] rounded-full "></span>
             </div>
           </div>
           <div className="div4 cursor-pointer  hover:opacity-[0.6] relative">
@@ -111,9 +112,9 @@ const Home = (props: Props) => {
               Men Sorts
             </h1>
             <div className=" flex items-center justify-center gap-1">
-              <span className="w-3 h-3 bg-[#212122] rounded-full "></span>
-              <span className="w-3 h-3 bg-[#e25951] rounded-full "></span>
-              <span className="w-3 h-3 bg-[#dcdddc] rounded-full "></span>
+              <span className="w-2 h-2 bg-[#212122] rounded-full "></span>
+              <span className="w-2 h-2 bg-[#e25951] rounded-full "></span>
+              <span className="w-2 h-2 bg-[#dcdddc] rounded-full "></span>
             </div>
           </div>
           <div className="div5 cursor-pointer  hover:opacity-[0.6] relative">
@@ -127,9 +128,9 @@ const Home = (props: Props) => {
               Polo T-shits
             </h1>
             <div className=" flex items-center justify-center gap-1">
-              <span className="w-3 h-3 bg-[#212122] rounded-full "></span>
-              <span className="w-3 h-3 bg-[#e25951] rounded-full "></span>
-              <span className="w-3 h-3 bg-[#dcdddc] rounded-full "></span>
+              <span className="w-2 h-2 bg-[#212122] rounded-full "></span>
+              <span className="w-2 h-2 bg-[#e25951] rounded-full "></span>
+              <span className="w-2 h-2 bg-[#dcdddc] rounded-full "></span>
             </div>
           </div>
           <div className="div6 cursor-pointer  hover:opacity-[0.6] relative">
@@ -143,17 +144,27 @@ const Home = (props: Props) => {
               Polo T-shits
             </h1>
             <div className=" flex items-center justify-center gap-1">
-              <span className="w-3 h-3 bg-[#212122] rounded-full "></span>
-              <span className="w-3 h-3 bg-[#e25951] rounded-full "></span>
-              <span className="w-3 h-3 bg-[#dcdddc] rounded-full "></span>
+              <span className="w-2 h-2 bg-[#212122] rounded-full "></span>
+              <span className="w-2 h-2 bg-[#e25951] rounded-full "></span>
+              <span className="w-2 h-2 bg-[#dcdddc] rounded-full "></span>
             </div>
           </div>
         </div>
       </div>
+      <div className="flex items-center justify-center flex-wrap p-2 gap-2">
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+      </div>
       <hr className="my-4" />
-      <section className="p-3 my-4">
+      <section className="sm:p-3 my-4">
         <h3 className="text-center text-sm">Voice of Elegance</h3>
-        <h2 className="text-center text-2xl md:text-2xl my-3 lg:text-3xl text-gray-700 font-semibold">
+        <h2 className="text-center mt-[-2px] text-2xl md:text-2xl my-3 lg:text-3xl text-gray-700 font-semibold">
           What Our Customers says
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:px-8 my-4 gap-6 mx-7 sm:mx-16 lg:mx-6 xl:mx-25">
@@ -211,6 +222,7 @@ const Home = (props: Props) => {
           </div>
         </div>
       </section>
+
       <Newsletter />
       <Footer />
     </div>

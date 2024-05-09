@@ -23,9 +23,9 @@ const FilterDrawer = (props: Props) => {
   const [filter, setFilter] = useState(0);
   return (
     <Drawer>
-      <div className="mobilFilters fixed mx-auto left-0 flex  w-full bottom-0 sm:hidden">
+      <div className="mobilFilters  fixed mx-auto left-0 flex  w-full bottom-0 sm:hidden">
         <DrawerTrigger
-          className="flex-1 bg-slate-50 py-3 border-t border-r rounded-none text-xs font-semibold"
+          className="flex-1 bg-slate-50 py-4 border-t border-r rounded-none text-xs font-semibold"
           onClick={() => setFilter(0)}
         >
           Filter
@@ -52,7 +52,7 @@ const FilterDrawer = (props: Props) => {
             <RadioGroup defaultValue="all">
               <div className="flex items-center space-x-2">
                 <RadioGroupItem value="all" id="all" />
-                <Label htmlFor="all" className="py-1 w-full">
+                <Label htmlFor="all" className="py-1 w-full ">
                   All
                 </Label>
               </div>

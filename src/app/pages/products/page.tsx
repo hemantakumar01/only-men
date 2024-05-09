@@ -114,7 +114,7 @@ const page = (props: Props) => {
           <Input placeholder="Search..." className="p-4 border-2" />
           <Button className="w-[200px]">Submit</Button>
         </div>
-        <div className="flex gap-8 flex-wrap mt-4 sm:mt-0  justify-center  sm:justify-start flex-1">
+        <div className="flex gap-1 flex-wrap mt-4 sm:mt-0  justify-center  sm:justify-start flex-1">
           <ProductCard />
           <ProductCard />
           <ProductCard />

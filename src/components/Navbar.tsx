@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import Menu from "./Menu";
 import { DrawerDemo } from "./Navbar/MenuDrawer";
+import Cart from "./Cart";
+import Wishlist from "./Wishlist";
 
 type Props = {};
 
@@ -64,28 +66,36 @@ const Navbar = (props: Props) => {
             />
             <Link href={"/signup"}>Sign Up</Link>
           </div>
-          <div className="sign relative border-r-2 px-2 flex text-sm font-semibold items-center gap-1">
-            <ShoppingCartIcon
-              size={"20px"}
-              className="text-blue-400 font-bold"
-              fontWeight={700}
-            />
-            <span>Cart</span>
-            <span className="w-4 h-4 rounded-[50%] bg-red-500 text-secondary flex items-center justify-center text-[9px] font-bold absolute top-[-10px] left-[-3px]">
-              1
-            </span>
-          </div>
-          <div className="sign border-r-2 px-2 flex text-sm font-semibold items-center gap-1 relative">
-            <Heart
-              size={"20px"}
-              className="text-blue-400 font-bold"
-              fontWeight={700}
-            />
-            <span className="w-4 h-4 rounded-[50%] bg-red-500 text-secondary flex items-center justify-center text-[9px] font-bold absolute top-[-10px] left-[-3px]">
-              1
-            </span>
-            <span>Wishlist</span>
-          </div>
+          <Cart
+            content={
+              <div className="sign relative border-r-2 px-2 flex text-sm font-semibold items-center gap-1">
+                <ShoppingCartIcon
+                  size={"20px"}
+                  className="text-blue-400 font-bold"
+                  fontWeight={700}
+                />
+                <span>Cart</span>
+                <span className="w-4 h-4 rounded-[50%] bg-red-500 text-secondary flex items-center justify-center text-[9px] font-bold absolute top-[-10px] left-[-3px]">
+                  1
+                </span>
+              </div>
+            }
+          />
+          <Wishlist
+            content={
+              <div className="sign border-r-2 px-2 flex text-sm font-semibold items-center gap-1 relative">
+                <Heart
+                  size={"20px"}
+                  className="text-blue-400 font-bold"
+                  fontWeight={700}
+                />
+                <span className="w-4 h-4 rounded-[50%] bg-red-500 text-secondary flex items-center justify-center text-[9px] font-bold absolute top-[-10px] left-[-3px]">
+                  1
+                </span>
+                <span>Wishlist</span>
+              </div>
+            }
+          />
         </div>
         <DrawerDemo
           content={

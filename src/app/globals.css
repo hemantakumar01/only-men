@@ -99,7 +99,15 @@
     );
   }
 }
-
+/* html {
+  height: -webkit-fill-available;
+}
+body {
+  height: -webkit-fill-available;
+}
+.custon-height {
+  height: -webkit-fill-available;
+} */
 .image-gallery-slide-wrapper,
 .image-gallery-thumbnails-bottom {
   @apply lg:flex lg:flex-row-reverse;
